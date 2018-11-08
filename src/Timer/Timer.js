@@ -10,14 +10,13 @@ class Timer extends Component {
     this.timer = setInterval(() => this.setState({
       timer: this.state.timer - 1}), 1000); 
  
-    console.log(this.state);
+    // console.log(this.state);
   };
 
   stopTimer = () => {
     clearInterval(this.timer);
     alert("Oops");
   };
-
 
   render() {
     return (

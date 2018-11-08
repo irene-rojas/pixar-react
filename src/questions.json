@@ -1,34 +1,34 @@
 [{
     "id": 1,
-    "question1": "1. The background image is the carpet from Sid's house in Toy Story. What movie inspired it?"
+    "text": "1. The background image is the carpet from Sid's house in Toy Story. What movie inspired it?"
 },
 {
     "id": 2,
-    "question2": "2. What is the name of the studio’s mascot?"
+    "text": "2. What is the name of the studio’s mascot?"
 },
 {
     "id": 3,
-    "question3": "3. What was the first Pixar movie shown in 3D?"
+    "text": "3. What was the first Pixar movie shown in 3D?"
 },
 {
     "id": 4,
-    "question4": "4. What was the first Pixar movie to receive a PG rating?"
+    "text": "4. What was the first Pixar movie to receive a PG rating?"
 },
 {
     "id": 5,
-    "question5": "5. Which actor turned down the role of Buzz Lightyear, but later voiced another Pixar character?"
+    "text": "5. Which actor turned down the role of Buzz Lightyear, but later voiced another Pixar character?"
 },
 {
     "id": 6,
-    "question6": "6. When did Disney acquire Pixar?"
+    "text": "6. When did Disney acquire Pixar?"
 },
 {
     "id": 7,
-    "question7": "7. What’s the final word of “Monsters, Inc”?"
+    "text": "7. What’s the final word of “Monsters, Inc”?"
 },
 {
     "id": 8,
-    "question8": "8. Who was the original voice of Marlin from “Finding Nemo”?"
+    "text": "8. Who was the original voice of Marlin from “Finding Nemo”?"
 }
 
 ]

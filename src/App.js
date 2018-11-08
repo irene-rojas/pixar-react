@@ -3,11 +3,12 @@ import './App.css';
 import Timer from "./Timer";
 import Radio from "./Radio";
 import questions from "./questions.json";
+import Questions from "./Pages/Questions";
 
 class App extends Component {
 
   state = {
-    questions
+    questions,
   };
 
 
@@ -17,20 +18,23 @@ class App extends Component {
       <div className="App">
 
         <div className="wrapper">
-        <h1>Pixar Trivia!</h1>
 
-          <div className="timer">
-            <Timer />
+
+          <div className="gameDiv">
+            <h1>Pixar Trivia!</h1>
+              <Timer />
+            <div className="questionsDiv">
+              <Questions />
+            </div>
           </div>
 
 
 
-          <div className="questions">
-            <h3>Hello</h3>
-            <Radio />
-          </div>
 
-          <div className="results"></div>
+
+          <div className="resultsDiv">
+
+          </div>
 
         </div>
 
