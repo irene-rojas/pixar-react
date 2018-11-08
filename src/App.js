@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import Timer from "./Timer";
+import Radio from "./Radio";
+import questions from "./questions.json";
 
 class App extends Component {
 
+  state = {
+    questions
+  };
 
 
 
@@ -12,16 +17,18 @@ class App extends Component {
       <div className="App">
 
         <div className="wrapper">
+        <h1>Pixar Trivia!</h1>
 
-          <div className="pixarTrivia">
-            <h1>Pixar Trivia!</h1>
-              <div className="timer">
-                <Timer />
-              </div>
+          <div className="timer">
+            <Timer />
           </div>
 
 
-          <div className="questions"></div>
+
+          <div className="questions">
+            <h3>Hello</h3>
+            <Radio />
+          </div>
 
           <div className="results"></div>
 

@@ -23,7 +23,7 @@ class Timer extends Component {
     return (
       <div className="Timer">
         <div>{this.state.timer} seconds</div>
-        <button onClick={this.startTimer}>Let's start!</button>
+        <button onClick={this.startTimer}>Start!</button>
         {this.state.timer === 0 && this.stopTimer()}
       </div>
     );
