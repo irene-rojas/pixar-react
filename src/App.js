@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Timer from "./Timer";
-// import Radio from "./Radio";
+import Radio from "./Radio";
 import questions from "./questions.json";
 import Questions from "./Questions/Questions.js";
 // import QuestionModel from "./QuestionModel";
@@ -29,6 +29,9 @@ class App extends Component {
 
             <div className="questionSection">
               <Questions questions={this.state.questions}/>
+              <Radio 
+              label={this.state.label}
+              />
             </div>
 
 

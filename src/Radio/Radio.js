@@ -29,7 +29,7 @@ class Radio extends Component {
                 value="option1" 
                 checked={this.state.selectedOption === 'option1'} 
                 onChange={this.handleOptionChange} />
-              Option 1
+                {/* this is where I want the text from the answerChoices in questions.json */}
             </label>
           </div>
 
