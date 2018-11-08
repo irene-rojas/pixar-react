@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
 import Timer from "./Timer";
-import Radio from "./Radio";
+// import Radio from "./Radio";
 import questions from "./questions.json";
-import Questions from "./Pages/Questions";
+import Questions from "./Questions/Questions.js";
 // import QuestionModel from "./QuestionModel";
 
 class App extends Component {
 
-  // state = {
-  //   questions,
-  // };
-
-
+  state = {
+    questions,
+  };
 
   render() {
     return (
+
+      <div className="parallax">
+
       <div className="App">
 
         <div className="wrapper">
@@ -26,8 +27,8 @@ class App extends Component {
               <Timer />
           </div>
 
-            <div className="questionsDiv">
-              <Questions />
+            <div className="questionSection">
+              <Questions questions={this.state.questions}/>
             </div>
 
 
@@ -37,6 +38,8 @@ class App extends Component {
           </div> */}
 
         </div>
+
+      </div>
 
       </div>
     );

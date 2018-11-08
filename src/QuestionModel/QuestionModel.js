@@ -1,38 +1,18 @@
-import React, {Component} from "react";
+import React from "react";
 import Radio from "../Radio";
-import questions from "../questions.json";
-
-class QuestionModel extends Component {
-
-    state = {
-        questions
-    };
-
-    render() {
-        return (
-
-            <div className="questionPage">
-                {this.state.questions.map(question => (
-                    <p
-                        id={question.id}
-                        key={question.id}
-                        text={question.text}
-                    />
-                ))}
-            </div>
-
-        )
-    }
-}
+import "./QuestionModel.css";
 
 
+const QuestionModel = props => (
 
-// const QuestionModel = props => (
-//     <div className="individualQuestion">
-//         <div className="text">{props.text}</div>
-//         <Radio />
-//     </div>
-// )
+    <div className="individualQuestion">
+        <div className="text">{props.text}</div>
+        <div className="answerOptions">
+            <Radio answers={props.label}/>
+        </div>
+    </div>
+    
+)
 
 
 

@@ -1,6 +1,24 @@
 [{
     "id": 1,
-    "text": "1. The background image is the carpet from Sid's house in Toy Story. What movie inspired it?"
+    "text": "1. The background image is the carpet from Sid's house in Toy Story. What movie inspired it?",
+    "answerChoices": [
+        {
+          "label": "2001: A Space Odyssey",
+          "value": false
+        },
+        {
+            "label": "The Shining",
+            "value": true
+        },
+        {
+            "label": "One Flew Over the Cuckoo's Nest",
+            "value": false
+        },
+        {
+            "label": "The Godfather",
+            "value": false
+        }
+    ]
 },
 {
     "id": 2,

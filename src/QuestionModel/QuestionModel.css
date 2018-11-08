@@ -1,0 +1,15 @@
+.individualQuestion {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto)
+}
+
+.text {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+
+.answerChoices {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+}
