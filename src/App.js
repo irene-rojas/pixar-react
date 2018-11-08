@@ -4,12 +4,13 @@ import Timer from "./Timer";
 import Radio from "./Radio";
 import questions from "./questions.json";
 import Questions from "./Pages/Questions";
+// import QuestionModel from "./QuestionModel";
 
 class App extends Component {
 
-  state = {
-    questions,
-  };
+  // state = {
+  //   questions,
+  // };
 
 
 
@@ -20,21 +21,20 @@ class App extends Component {
         <div className="wrapper">
 
 
-          <div className="gameDiv">
+          <div className="header">
             <h1>Pixar Trivia!</h1>
               <Timer />
+          </div>
+
             <div className="questionsDiv">
               <Questions />
             </div>
-          </div>
 
 
 
+          {/* <div className="resultsDiv">
 
-
-          <div className="resultsDiv">
-
-          </div>
+          </div> */}
 
         </div>
 
