@@ -15,6 +15,7 @@ class Radio extends Component {
   };
 
 // do I need to map radio component itself?
+// ternery? if option in answerChoices[], add a button
 
   render() {
     return (
