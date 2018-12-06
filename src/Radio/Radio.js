@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import questions from "../questions.json";
+import answers from "../questions.json";
 
 class Radio extends Component {
 
   state = {
     selectedOption: " ",
-    questions
+    answers
   };
 
   handleOptionChange = (event) => {
@@ -14,6 +14,10 @@ class Radio extends Component {
     });
   };
 
+
+
+
+
 // do I need to map radio component itself?
 // ternery? if option in answerChoices[], add a button
 
@@ -21,50 +25,18 @@ class Radio extends Component {
     return (
       <div className="radioStyle">
 
-        <form>
 
           <div className="radio">
-            <label>
+
+            <form>
               <input 
                 type="radio" 
-                value="option1" 
-                checked={this.state.selectedOption === 'option1'} 
+                value="option" 
                 onChange={this.handleOptionChange} />
-                {/* this is where I want the text from the answerChoices in questions.json. Or is it? Should the mapping be done *to* this component, not as part of it? */}
-            </label>
+            </form>
+            
           </div>
 
-          <div className="radio">
-            <label>
-              <input 
-              type="radio" 
-              value="option2" 
-              checked={this.state.selectedOption === 'option2'} onChange={this.handleOptionChange} />
-              Option 2
-            </label>
-          </div>
-
-          <div className="radio">
-            <label>
-              <input 
-              type="radio" 
-              value="option3" 
-              checked={this.state.selectedOption === 'option3'} onChange={this.handleOptionChange} />
-              Option 3
-            </label>
-          </div>
-
-          <div className="radio">
-            <label>
-              <input 
-              type="radio" 
-              value="option4" 
-              checked={this.state.selectedOption === 'option4'} onChange={this.handleOptionChange} />
-              Option 4
-            </label>
-          </div>
-
-        </form>
         
       </div>
 
