@@ -45,12 +45,14 @@ class Questions extends Component {
     <div className="questionsDiv">
 
         <ol>
-            {this.state.questions.map(question => (
+            {this.state.questions.map(question => {
+             return (
                 <QuestionModel
                     key={question.id}
                     text={question.text}
-                />      
-            ))}
+                />  
+                )    
+            })}
         </ol>
 
         </div>
