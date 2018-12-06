@@ -1,11 +1,35 @@
 import React, { Component } from 'react';
-import answers from "../questions.json";
 
 class Radio extends Component {
 
   state = {
     selectedOption: " ",
-    answers
+    answers: [
+        {
+            id: "1-1",
+            label: "2001: A Space Odyssey",
+            value: false
+        },
+        {
+            id: "1-2",
+            label: "The Shining",
+            value: true
+        },
+        {
+            id: "1-3",
+            label: "One Flew Over the Cuckoo's Nest",
+            value: false
+        },
+        {
+            id: "1-4",
+            label: "The Godfather",
+            value: false
+        }
+
+        
+
+            
+    ]
   };
 
   handleOptionChange = (event) => {
@@ -23,22 +47,23 @@ class Radio extends Component {
 
   render() {
     return (
-      <div className="radioStyle">
 
 
           <div className="radio">
 
             <form>
+                {this.state.answers.map(answer => (
               <input 
+                key={answer.id}
                 type="radio" 
-                value="option" 
+                value={answer.value} 
                 onChange={this.handleOptionChange} />
+                ))}
             </form>
             
           </div>
 
         
-      </div>
 
     );
   }
