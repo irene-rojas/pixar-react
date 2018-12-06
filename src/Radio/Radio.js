@@ -1,49 +1,20 @@
 import React, { Component } from 'react';
+import answers from "../answers.json";
 
 class Radio extends Component {
 
   state = {
     selectedOption: " ",
-    answers: [
-        {
-            id: "1-1",
-            label: "2001: A Space Odyssey",
-            value: false
-        },
-        {
-            id: "1-2",
-            label: "The Shining",
-            value: true
-        },
-        {
-            id: "1-3",
-            label: "One Flew Over the Cuckoo's Nest",
-            value: false
-        },
-        {
-            id: "1-4",
-            label: "The Godfather",
-            value: false
-        }
-
-        
-
-            
-    ]
+    answers
   };
+
+  
 
   handleOptionChange = (event) => {
-    this.setState({
-      selectedOption: event.target.value
-    });
+    console.log("clicked");
   };
 
-
-
-
-
-// do I need to map radio component itself?
-// ternery? if option in answerChoices[], add a button
+  // ternery? if option in answerChoices[], add a button
 
   render() {
     return (
@@ -57,6 +28,7 @@ class Radio extends Component {
                 key={answer.id}
                 type="radio" 
                 value={answer.value} 
+                checked={answer.selected}
                 onChange={this.handleOptionChange} />
                 ))}
             </form>

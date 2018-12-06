@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Timer from "./Timer";
-import questions from "./questions.json";
 import Questions from "./Questions/Questions.js";
 // import QuestionModel from "./QuestionModel";
 
 class App extends Component {
 
-  state = {
-    questions,
-  };
+
 
 
   render() {
@@ -29,7 +26,7 @@ class App extends Component {
             <Timer />   
 
             <div className="questionSection">
-              <Questions questions={this.state.questions}/>
+              <Questions />
             </div>
 
 

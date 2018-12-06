@@ -3,7 +3,8 @@ import QuestionModel from "../QuestionModel";
 
 class Questions extends Component {
 
-    state = [
+    state = {
+        questions: [
         {
             id: 1,
             text: "1. The background image is the carpet from Sid's house in Toy Story. What movie inspired it?"
@@ -36,15 +37,15 @@ class Questions extends Component {
             id: 8,
             text: "8. Who was the original voice of Marlin from “Finding Nemo”?"
         }
-
     ]
+    }
 
     render() {
         return (
     <div className="questionsDiv">
 
         <ol>
-            {this.state.map(question => (
+            {this.state.questions.map(question => (
                 <QuestionModel
                     key={question.id}
                     text={question.text}
@@ -53,7 +54,7 @@ class Questions extends Component {
         </ol>
 
         </div>
-        
+
         )
     }
 
