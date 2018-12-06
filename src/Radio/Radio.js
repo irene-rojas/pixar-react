@@ -14,7 +14,7 @@ class Radio extends Component {
     });
   };
 
-
+// do I need to map radio component itself?
 
   render() {
     return (
@@ -29,7 +29,7 @@ class Radio extends Component {
                 value="option1" 
                 checked={this.state.selectedOption === 'option1'} 
                 onChange={this.handleOptionChange} />
-                {/* this is where I want the text from the answerChoices in questions.json */}
+                {/* this is where I want the text from the answerChoices in questions.json. Or is it? Should the mapping be done *to* this component, not as part of it? */}
             </label>
           </div>
 

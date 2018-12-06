@@ -7,8 +7,7 @@ const QuestionModel = props => (
 
     <div className="individualQuestion">
         <div className="text">{props.text}</div>
-        <div className="answerOptions">
-            <Radio labels={props.label}/>
+        <div className="answerChoices">{props.answerChoices}
         </div>
     </div>
     

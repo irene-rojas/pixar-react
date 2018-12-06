@@ -24,13 +24,15 @@ class App extends Component {
 
           <div className="header">
             <h1>Pixar Trivia!</h1>
-              <Timer />
           </div>
+
+            <Timer />
+
 
             <div className="questionSection">
               <Questions questions={this.state.questions}/>
               <Radio 
-              label={this.state.label}
+                label={this.state.label}
               />
             </div>
 
