@@ -6,22 +6,18 @@ class Radio extends Component {
     answerChoices: [
         {answers1: [
                 {
-                    id: 1,
                     label: "2001: A Space Odyssey",
                     value: false
                 },
                 {
-                    id: 2,
                     label: "The Shining",
                     value: true
                 },
                 {
-                    id: 3,
                     label: "One Flew Over the Cuckoo's Nest",
                     value: false
                 },
                 {
-                    id: 4,
                     label: "The Godfather",
                     value: false
                 }

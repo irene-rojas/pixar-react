@@ -22,40 +22,40 @@ const answerChoices = [
         }
     ]},
     {answers2: [
-            {
-                label: "Luxo Ball",
-                value: false
-            },
-            { 
-                label: "Luxo",
-                value: false
-            },
-            {
-                label: "Luxo, Jr.",
-                value: true
-            },
-            {
-                label: "Tinny",
-                value: false
-            }
+        {
+            label: "Luxo Ball",
+            value: false
+        },
+        { 
+            label: "Luxo",
+            value: false
+        },
+        {
+            label: "Luxo, Jr.",
+            value: true
+        },
+        {
+            label: "Tinny",
+            value: false
+        }
     ]},
     {answers3: [
         {
             label: "Up",
             value: true
-            },
-            { 
+        },
+        { 
             label: "A Bug's Life",
             value: false
-            },
-            {
+        },
+        {
             label: "Toy Story 2",
             value: false
-            },
-            {
+        },
+        {
             label: "Tinny",
             value: false
-            }
+        }
     ]},
     {answers4: [
         {
