@@ -141,7 +141,6 @@ const answerChoices = [
     ]}
     ]
 
-  
   class Answers extends Component {
 
     state = {
@@ -166,6 +165,5 @@ const answerChoices = [
       );
     }
   }
-
 
   export default Answers;

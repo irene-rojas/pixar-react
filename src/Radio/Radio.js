@@ -147,20 +147,11 @@ class Radio extends Component {
         ]
   };
 
-  
-
   handleOptionChange = (event) => {
     event.preventDefault();
     console.log("clicked");
     // checked={true}
   };
-
-//   create groups for each question
-// for each item in a group, create a radio button with that name
-
-// ternery? if option in answerChoices[], add a button
-
-
 
   render() {
     return (
@@ -182,8 +173,6 @@ class Radio extends Component {
             </form>
 
           </div>
-
-        
 
     );
   }

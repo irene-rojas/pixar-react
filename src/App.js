@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Timer from "./Timer";
 import Questions from "./Questions/Questions.js";
-// import QuestionModel from "./QuestionModel";
 
 class App extends Component {
-
-
 
   render() {
     return (
@@ -27,12 +24,6 @@ class App extends Component {
             <div className="questionSection">
               <Questions />
             </div>
-
-
-
-          {/* <div className="resultsDiv">
-
-          </div> */}
 
         </div>
 
