@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 const answerChoices = {
-    answers: [
+    answers1: [
         {
             label: "2001: A Space Odyssey",
             value: false
@@ -20,7 +20,7 @@ const answerChoices = {
             value: false
         }
         ],
-    answers: [
+    answers2: [
         {
             label: "Luxo Ball",
             value: false
@@ -38,7 +38,7 @@ const answerChoices = {
             value: false
         }
         ],
-    answers: [
+    answers3: [
         {
             label: "Up",
             value: true
@@ -56,7 +56,7 @@ const answerChoices = {
             value: false
         }
         ],
-    answers: [
+    answers4: [
         {
             label: "Brave",
             value: false
@@ -74,7 +74,7 @@ const answerChoices = {
             value: true
         }
         ],
-    answers: [
+    answers5: [
         {
             label: "Albert Brooks",
             value: false
@@ -92,7 +92,7 @@ const answerChoices = {
             value: false
         }
         ],
-    answers: [
+    answers6: [
         {
             label: "2004",
             value: false
@@ -110,7 +110,7 @@ const answerChoices = {
             value: false
         }
         ],
-    answers: [
+    answers7: [
         {
             label: "Boo",
             value: false
@@ -120,7 +120,7 @@ const answerChoices = {
             value: true
         }
         ],
-    answers: [
+    answers8: [
         {
             label: "Albert Brooks",
             value: false
@@ -140,7 +140,7 @@ const answerChoices = {
         ]
 };
 
-{console.log("top" + answerChoices)}
+{console.log(`top ${answerChoices}`)}
 
 class Radio extends Component {
 
