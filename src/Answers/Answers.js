@@ -162,8 +162,10 @@ const answerChoices = [
           onChange={this.handleChange}
           options={answerChoices}
         />
+        
       );
     }
+    
   }
 
   export default Answers;
