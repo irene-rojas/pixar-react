@@ -44,19 +44,19 @@ class Radio extends Component {
                 {
                     label: "Up",
                     value: true
-                    },
-                    { 
+                },
+                { 
                     label: "A Bug's Life",
                     value: false
-                    },
-                    {
+                },
+                {
                     label: "Toy Story 2",
                     value: false
-                    },
-                    {
+                },
+                {
                     label: "Tinny",
                     value: false
-                    }
+                }
             ]},
             {answers4: [
                 {
@@ -155,17 +155,21 @@ class Radio extends Component {
           <div className="radio">
 
             <form>
-                {this.state.answerChoices.map(answer => {
-                return (
-                    <input 
-                        type="radio" 
-                        key={answer.id}
-                        value={answer.value} 
-                        defaultChecked={false}
-                        onClick={this.handleOptionChange} 
-                    />
+                {/* {this.state.answerChoices.map(answerOptions => {
+                     (answerOptions.map(option =>  (
+                         (
+                        <input 
+                            type="radio" 
+                            key={option.id}
+                            value={option.value} 
+                            defaultChecked={false}
+                            onClick={this.handleOptionChange} 
+                        />
+                        )
+                    ))
                     )
-                })}
+                })} */}
+                {console.log(this.state.answerChoices)}
             </form>
 
           </div>
