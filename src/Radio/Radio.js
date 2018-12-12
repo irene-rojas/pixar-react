@@ -140,7 +140,7 @@ const answerChoices = {
         ]
 };
 
-{console.log(`top ${answerChoices}`)}
+// {console.log(`top ${answerChoices.label}`)}
 
 class Radio extends Component {
 
@@ -190,7 +190,7 @@ class Radio extends Component {
                     </div>
                     ))} */}
             {/* </form> */}
-            {console.log(`hello ${this.state.answerChoices.answers7}`)}
+            {console.log(`hello ${this.state.answerChoices.answers4[0].label}`)}
 
           </div>
 
