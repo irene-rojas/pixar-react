@@ -9,7 +9,7 @@ const QuestionModel = (props) => (
     <div className="individualQuestion">
         <div className="text">{props.text}</div>
         <div className="answerChoices">
-            <Answers />
+            {/* <Answers /> */}
             <Radio />
         </div>
     </div>

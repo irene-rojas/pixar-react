@@ -145,6 +145,7 @@ const answerChoices = {
 class Radio extends Component {
 
     state = {
+        answerChoices,
         selectedOption: null,
       }
 
@@ -189,7 +190,7 @@ class Radio extends Component {
                     </div>
                     ))} */}
             {/* </form> */}
-            {console.log(this.state.answerChoices)}
+            {console.log(`hello ${this.state.answerChoices.answers7}`)}
 
           </div>
 
