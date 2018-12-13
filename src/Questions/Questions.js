@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import QuestionModel from "../QuestionModel";
 import Select from "react-select";
+import "./Questions.css";
 
 const answerChoices = [
     {
@@ -190,23 +190,24 @@ class Questions extends Component {
         const { selectedOption } = this.state;
 
         return (
+
             <div className="questionsDiv">
 
                 <ol>
                     {this.state.answerChoices.map(question => {
                     return (
-                        <div key={question.id}
->
-                            <QuestionModel
-                                text={question.text}
-                            />  
+
+                        <div className="individualQuestions" key={question.id}>
+
+                            {question.text}
+                            
                             <Select
                                 value={selectedOption}
                                 onChange={this.handleChange}
                                 options={answerChoices[0].answers}
                             />
-                        </div>
 
+                        </div>
 
                         )    
                     })}
@@ -218,7 +219,5 @@ class Questions extends Component {
     }
 
 }
-
-
 
 export default Questions;
