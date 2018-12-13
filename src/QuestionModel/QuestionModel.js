@@ -8,10 +8,10 @@ const QuestionModel = (props) => (
 
     <div className="individualQuestion">
         <div className="text">{props.text}</div>
-        <div className="answerChoices">
-            <Answers />
-            <Radio />
-        </div>
+        {/* <div className="answerChoices"> */}
+            {/* <Answers /> */}
+            {/* <Radio /> */}
+        {/* </div> */}
     </div>
     
 )
