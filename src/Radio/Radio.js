@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 
-const answerChoices = {
-    answers1: [
+const answerChoices = [
+    {answers: [
         {
             label: "2001: A Space Odyssey",
             value: false
@@ -19,8 +19,8 @@ const answerChoices = {
             label: "The Godfather",
             value: false
         }
-        ],
-    answers2: [
+        ]},
+    {answers: [
         {
             label: "Luxo Ball",
             value: false
@@ -37,8 +37,8 @@ const answerChoices = {
             label: "Tinny",
             value: false
         }
-        ],
-    answers3: [
+        ]},
+    {answers: [
         {
             label: "Up",
             value: true
@@ -55,8 +55,8 @@ const answerChoices = {
             label: "Tinny",
             value: false
         }
-        ],
-    answers4: [
+        ]},
+    {answers: [
         {
             label: "Brave",
             value: false
@@ -73,8 +73,8 @@ const answerChoices = {
             label: "The Incredibles",
             value: true
         }
-        ],
-    answers5: [
+        ]},
+    {answers: [
         {
             label: "Albert Brooks",
             value: false
@@ -91,8 +91,8 @@ const answerChoices = {
             label: "John Goodman",
             value: false
         }
-        ],
-    answers6: [
+        ]},
+    {answers: [
         {
             label: "2004",
             value: false
@@ -109,8 +109,8 @@ const answerChoices = {
             label: "2007",
             value: false
         }
-        ],
-    answers7: [
+        ]},
+    {answers: [
         {
             label: "Boo",
             value: false
@@ -119,8 +119,8 @@ const answerChoices = {
             label: "Kitty",
             value: true
         }
-        ],
-    answers8: [
+        ]},
+    {answers: [
         {
             label: "Albert Brooks",
             value: false
@@ -137,10 +137,9 @@ const answerChoices = {
             label: "William H. Macy",
             value: true
         }
-        ]
-};
+        ]}
+    ];
 
-// {console.log(`top ${answerChoices.label}`)}
 
 class Radio extends Component {
 
@@ -157,40 +156,10 @@ class Radio extends Component {
 
   render() {
     return (
-          <div>
 
-          {/* <div className="radio"> */}
+          <div className="radio">
 
-            {/* <form> */}
-                {/* {this.state.answerChoices.answers.map(answerOptions => {
-                        return (
-                        <input 
-                            type="radio" 
-                            key={answerOptions.id}
-                            value={answerOptions.value} 
-                            defaultChecked={false}
-                            onClick={this.handleOptionChange} 
-                        />
-                        )
-                })} */}
-
-                    {/* {this.answerChoices.map((item, index) => (
-                    <div key={index}>
-                        {item.answers.map((answers, i) => (
-                        <div key={i}>
-                            <input 
-                                type="radio"
-                                key={answers.id}
-                                values={answers.value} 
-                                defaultChecked={false}
-                                onClick={this.handleOptionChange}
-                            />
-                        </div>
-                        ))}
-                    </div>
-                    ))} */}
-            {/* </form> */}
-            {console.log(`hello ${this.state.answerChoices.answers4[0].label}`)}
+            {console.log(`hello ${this.state.answerChoices[0].answers[0].label}`)}
 
           </div>
 
