@@ -159,7 +159,7 @@ class Radio extends Component {
 
           <div className="radio">
 
-            {console.log(`hello ${this.state.answerChoices[0].answers[0].label}`)}
+            {/* {console.log(`hello ${this.state.answerChoices[0].answers[1].label}`)} */}
 
           </div>
 
