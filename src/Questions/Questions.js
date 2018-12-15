@@ -179,12 +179,17 @@ class Questions extends Component {
     state = {
         answerChoices,
         selectedOption: null,
+        totalTrue: []
     }
 
     handleChange = (selectedOption) => {
         this.setState({ selectedOption });
         console.log(`Option selected:`, selectedOption);
       }
+
+    // need a function to count number of "value: true" responses
+        // onSubmit
+    // display results in a results div
   
     render() {
         // const { selectedOption } = this.state;
