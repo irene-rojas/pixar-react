@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Timer from "./Timer";
 import Questions from "./Questions/Questions.js";
+// import Results from "../src/Results";
 
 class App extends Component {
 
@@ -10,25 +11,28 @@ class App extends Component {
 
       <div className="parallax">
 
-      <div className="App">
+        <div className="App">
 
-        <div className="wrapper">
+            <div className="wrapper">
 
 
-          <div className="header">
-            <h1>Pixar Trivia!</h1>
-          </div>
+            <div className="header">
+                <h1>Pixar Trivia!</h1>
+            </div>
 
             <Timer />   
 
             <div className="questionSection">
-              <Questions />
+            <Questions />
+            </div>
+
+            <div className="resultsDiv">
+                {/* <Results /> */}
+            </div>
 
             </div>
 
         </div>
-
-      </div>
 
       </div>
     );
