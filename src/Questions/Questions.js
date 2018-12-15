@@ -204,7 +204,7 @@ class Questions extends Component {
                             <Select
                                 value={selectedOption}
                                 onChange={this.handleChange}
-                                options={answerChoices[0].answers}
+                                options={question.answers}
                             />
 
                         </div>

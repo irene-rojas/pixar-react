@@ -15,7 +15,7 @@ class Timer extends Component {
 
   stopTimer = () => {
     clearInterval(this.timer);
-    alert("Oops");
+    alert("Time's out!");
   };
 
   render() {
