@@ -187,7 +187,7 @@ class Questions extends Component {
       }
   
     render() {
-        const { selectedOption } = this.state;
+        // const { selectedOption } = this.state;
 
         return (
 
@@ -202,7 +202,7 @@ class Questions extends Component {
                             {question.text}
                             
                             <Select
-                                value={selectedOption}
+                                value={this.selectedOption}
                                 onChange={this.handleChange}
                                 options={question.answers}
                             />
