@@ -19,11 +19,11 @@ class Results extends Component {
             <div className="masterResultsDiv">
 
                 <div>
-                    correct
+                    Correct: {this.state.totalTrue}
                 </div>
 
                 <div>
-                    wrong
+                    Wrong: {this.state.totalFalse}
                 </div>
 
             </div>
