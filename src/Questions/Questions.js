@@ -191,7 +191,7 @@ class Questions extends Component {
     handleChange = (selectedOption) => {
         this.setState({ selectedOption });
         console.log(`Option selected:`, selectedOption);
-        
+
         const answerValue = selectedOption.value;
         if (answerValue === true) {
             // console.log(answerValue);
@@ -213,7 +213,6 @@ class Questions extends Component {
         // print this.state.totalTrue, etc, here
     };
 
-  
     render() {
         // const { selectedOption } = this.state;
 
@@ -242,7 +241,6 @@ class Questions extends Component {
                 </ol>
 
                 <button onClick={this.handleFormSubmit}>Submit</button>
-
 
                 <div className="masterResultsDiv">
 

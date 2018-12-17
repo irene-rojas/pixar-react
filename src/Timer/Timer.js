@@ -9,9 +9,7 @@ class Timer extends Component {
   startTimer = () => {
     this.timer = setInterval(() => this.setState({
       timer: this.state.timer - 1}), 1000); 
- 
-    // console.log(this.state);
-  };
+   };
 
   stopTimer = () => {
     clearInterval(this.timer);

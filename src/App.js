@@ -15,7 +15,6 @@ class App extends Component {
 
             <div className="wrapper">
 
-
             <div className="header">
                 <h1>Pixar Trivia!</h1>
             </div>
@@ -23,7 +22,7 @@ class App extends Component {
             <Timer />   
 
             <div className="questionSection">
-            <Questions />
+                <Questions />
             </div>
 
             <div className="resultsDiv">

@@ -10,7 +10,6 @@ class Results extends Component {
 
     // count number of true answers
     answersTrue = (props) => {
-        
     };
 
     render() {
@@ -30,10 +29,6 @@ class Results extends Component {
 
         )
     }
-
-
-
-
 }
 
 export default Results;
