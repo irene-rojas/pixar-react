@@ -192,13 +192,12 @@ class Questions extends Component {
       // submit button
     handleFormSubmit = event => {
         event.preventDefault();
-        // const answersTrue = this.state.selectedOption.value.find(
-            // if (value === true) {
-            // console.log(answersTrue)
-            // }
-        //  )
-        const answerTrue = this.state.selectedOption.value;
-        console.log(answerTrue);
+
+        const answerValues = this.state.selectedOption.value;
+        console.log(answerValues);
+        // .find (needs to cycle through selectedOption)
+        // if (value === true)...
+        // if (value === false)...
     };
 
     // need a function to count number of "value: true" responses
