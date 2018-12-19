@@ -25,6 +25,7 @@ class App extends Component {
                 <Questions />
             </div>
 
+            {/* this.state.articles.length > 0 && ...*/}
             <div className="resultsDiv">
                 {/* <Results /> */}
             </div>

@@ -183,6 +183,7 @@ class Questions extends Component {
         totalFalse: 0,
     }
 
+    // check component mounted
     componentDidMount() {
         console.log(`TotalTrue: ${this.state.totalTrue}`);
         console.log(`TotalFalse: ${this.state.totalFalse}`);
