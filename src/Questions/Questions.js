@@ -243,18 +243,6 @@ class Questions extends Component {
 
                 <button onClick={this.handleFormSubmit}>Submit</button>
 
-                <div className="masterResultsDiv">
-
-                    <div>
-                        Correct: {this.state.totalTrue}
-                    </div>
-
-                    <div>
-                        Wrong: {this.state.totalFalse}
-                    </div>
-
-                </div>
-
             </div>
 
         )

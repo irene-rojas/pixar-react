@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Timer from "./Timer";
 import Questions from "./Questions/Questions.js";
-// import Results from "../src/Results";
+import Results from "../src/Results";
 
 class App extends Component {
 
@@ -27,7 +27,7 @@ class App extends Component {
 
             {/* this.state.articles.length > 0 && ...*/}
             <div className="resultsDiv">
-                {/* <Results /> */}
+                <Results />
             </div>
 
             </div>

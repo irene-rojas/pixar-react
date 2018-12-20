@@ -1,36 +1,21 @@
-import React, { Component } from "react";
-// import Questions from "../Questions";
+import React from "react";
 
-// Could this be a stateless component? It's just showing the results, not tabulating them, right?
+const Results = (props) => {
+    let totalTrue = props.totalTrue;
+    let totalFalse = props.totalFalse;
+    return (
+        <div className="masterResultsDiv">
 
-class Results extends Component {
-
-    state = {
-        totalTrue: null,
-        totalFalse: null
-    };
-
-    // count number of true answers
-    answersTrue = (props) => {
-    };
-
-    render() {
-        return (
-
-            <div className="masterResultsDiv">
-
-                <div>
-                    Correct: {this.state.totalTrue}
-                </div>
-
-                <div>
-                    Wrong: {this.state.totalFalse}
-                </div>
-
+            <div>
+                Correct: {totalTrue}
             </div>
 
-        )
-    }
+            <div>
+                Wrong: {totalFalse}
+            </div>
+
+        </div>
+            )
 }
 
 export default Results;
