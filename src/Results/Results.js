@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Questions from "../Questions";
+// import Questions from "../Questions";
+
+// Could this be a stateless component? It's just showing the results, not tabulating them, right?
 
 class Results extends Component {
 
