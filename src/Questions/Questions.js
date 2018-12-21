@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Select from "react-select";
 import "./Questions.css";
+// import Results from "../Results";
 
 const answerChoices = [
     {
@@ -179,15 +180,15 @@ class Questions extends Component {
     state = {
         answerChoices,
         selectedOption: null,
-        totalTrue: 0,
-        totalFalse: 0,
+        // totalTrue: 0,
+        // totalFalse: 0,
     }
 
     // check component mounted
-    componentDidMount() {
-        console.log(`TotalTrue: ${this.state.totalTrue}`);
-        console.log(`TotalFalse: ${this.state.totalFalse}`);
-    }
+    // componentDidMount() {
+    //     console.log(`TotalTrue: ${this.state.totalTrue}`);
+    //     console.log(`TotalFalse: ${this.state.totalFalse}`);
+    // }
 
     handleChange = (selectedOption) => {
         this.setState({ selectedOption });
@@ -196,7 +197,7 @@ class Questions extends Component {
         const answerValue = selectedOption.value;
         if (answerValue === true) {
             // console.log(answerValue);
-            this.setState({totalTrue: this.state.totalTrue + 1}, () => {
+            this.setState({totalTrue: this.totalTrue + 1}, () => {
                 console.log(`New TotalTrue: ${this.state.totalTrue}`);
             });
         };
@@ -208,11 +209,7 @@ class Questions extends Component {
         };
       }
 
-      // submit button
-    handleFormSubmit = event => {
-        event.preventDefault();
-        // print this.state.totalTrue, etc, here
-    };
+
 
     render() {
         // const { selectedOption } = this.state;
@@ -241,7 +238,6 @@ class Questions extends Component {
                     })}
                 </ol>
 
-                <button onClick={this.handleFormSubmit}>Submit</button>
 
             </div>
 

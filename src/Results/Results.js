@@ -1,17 +1,15 @@
 import React from "react";
 
 const Results = (props) => {
-    let totalTrue = props.totalTrue;
-    let totalFalse = props.totalFalse;
     return (
         <div className="masterResultsDiv">
 
             <div>
-                Correct: {totalTrue}
+                Correct: {props.totalTrue}
             </div>
 
             <div>
-                Wrong: {totalFalse}
+                Wrong: {props.totalFalse}
             </div>
 
         </div>
