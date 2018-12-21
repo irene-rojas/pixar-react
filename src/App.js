@@ -16,11 +16,11 @@ class App extends Component {
         console.log(`TotalFalse: ${this.state.totalFalse}`);
     }
 
-          // submit button
-          handleFormSubmit = event => {
-            event.preventDefault();
-            console.log("submit button clicked");
-        };
+    // submit button
+    handleFormSubmit = event => {
+        event.preventDefault();
+        console.log("submit button clicked");
+    };
 
   render() {
     return (
@@ -38,7 +38,10 @@ class App extends Component {
             <Timer />   
 
             <div className="questionSection">
-                <Questions />
+                <Questions
+                    totalTrue={this.state.totalTrue}
+                    totalFalse={this.state.totalFalse}
+                    />
             </div>
 
             <div>

@@ -190,26 +190,24 @@ class Questions extends Component {
     //     console.log(`TotalFalse: ${this.state.totalFalse}`);
     // }
 
-    handleChange = (selectedOption) => {
+    handleChange = (selectedOption, props) => {
         this.setState({ selectedOption });
         console.log(`Option selected:`, selectedOption);
 
         const answerValue = selectedOption.value;
         if (answerValue === true) {
             // console.log(answerValue);
-            this.setState({totalTrue: this.totalTrue + 1}, () => {
-                console.log(`New TotalTrue: ${this.state.totalTrue}`);
+            this.setState({totalTrue: props.totalTrue + 1}, () => {
+                console.log(`New TotalTrue: ${props.totalTrue}`);
             });
         };
         if (answerValue === false) {
             // console.log(answerValue);
-            this.setState({totalFalse: this.state.totalFalse + 1}, () => {
-                console.log(`New TotalFalse: ${this.state.totalFalse}`);
+            this.setState({totalFalse: this.totalFalse + 1}, () => {
+                console.log(`New TotalFalse: ${this.totalFalse}`);
             });
         };
       }
-
-
 
     render() {
         // const { selectedOption } = this.state;
