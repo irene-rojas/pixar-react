@@ -22,6 +22,8 @@ class App extends Component {
         console.log("submit button clicked");
     };
 
+    
+
   render() {
     return (
 
@@ -40,10 +42,7 @@ class App extends Component {
             </div>
 
             <div className="questionSection">
-                <Questions
-                    totalTrue={this.props.totalTrue}
-                    totalFalse={this.props.totalFalse}
-                    />
+                <Questions />
             </div>
 
             <div>
