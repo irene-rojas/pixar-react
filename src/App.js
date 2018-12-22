@@ -31,16 +31,18 @@ class App extends Component {
 
             <div className="wrapper">
 
-            <div className="header">
+            <div className="headerDiv">
                 <h1>Pixar Trivia!</h1>
             </div>
 
-            <Timer />   
+            <div className="timerDiv">
+                <Timer />   
+            </div>
 
             <div className="questionSection">
                 <Questions
-                    totalTrue={this.state.totalTrue}
-                    totalFalse={this.state.totalFalse}
+                    totalTrue={this.props.totalTrue}
+                    totalFalse={this.props.totalFalse}
                     />
             </div>
 

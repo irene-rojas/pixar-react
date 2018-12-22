@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Select from "react-select";
 import "./Questions.css";
-// import Results from "../Results";
 
 const answerChoices = [
     {
@@ -180,25 +179,17 @@ class Questions extends Component {
     state = {
         answerChoices,
         selectedOption: null,
-        // totalTrue: 0,
-        // totalFalse: 0,
     }
 
-    // check component mounted
-    // componentDidMount() {
-    //     console.log(`TotalTrue: ${this.state.totalTrue}`);
-    //     console.log(`TotalFalse: ${this.state.totalFalse}`);
-    // }
-
-    handleChange = (selectedOption, props) => {
+    handleChange = (selectedOption) => {
         this.setState({ selectedOption });
         console.log(`Option selected:`, selectedOption);
 
         const answerValue = selectedOption.value;
         if (answerValue === true) {
             // console.log(answerValue);
-            this.setState({totalTrue: props.totalTrue + 1}, () => {
-                console.log(`New TotalTrue: ${props.totalTrue}`);
+            this.setState({totalTrue: this.totalTrue + 1}, () => {
+                console.log(`New TotalTrue: ${this.totalTrue}`);
             });
         };
         if (answerValue === false) {
