@@ -22,7 +22,9 @@ class App extends Component {
         console.log("submit button clicked");
     };
 
-    
+    callbackHandlerFunction = (selectedOption) => {
+        this.setState({ selectedOption });
+    }
 
   render() {
     return (
@@ -42,7 +44,9 @@ class App extends Component {
             </div>
 
             <div className="questionSection">
-                <Questions />
+                <Questions 
+                    handleClickInParent={this.callbackHandlerFunction} 
+                />
             </div>
 
             <div>
