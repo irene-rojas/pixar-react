@@ -179,44 +179,14 @@ class Questions extends Component {
     state = {
         answerChoices,
         selectedOption: null,
-        totalTrue: 0,
-        totalFalse: 0,
-    }
-
-    // check component mounted
-    componentDidMount() {
-        console.log(`TotalTrue: ${this.state.totalTrue}`);
-        console.log(`TotalFalse: ${this.state.totalFalse}`);
     }
 
     handleChange = (selectedOption) => {
-        this.setState({ selectedOption });
-        console.log(`Option selected:`, selectedOption);
-
-        const answerValue = selectedOption.value;
-        if (answerValue === true) {
-            // console.log(answerValue);
-            this.setState({totalTrue: this.state.totalTrue + 1}, () => {
-                console.log(`New TotalTrue: ${this.state.totalTrue}`);
-            });
-        };
-        if (answerValue === false) {
-            // console.log(answerValue);
-            this.setState({totalFalse: this.state.totalFalse + 1}, () => {
-                console.log(`New TotalFalse: ${this.state.totalFalse}`);
-            });
-        };
+        this.props.handleClickInParent(selectedOption);
       }
-
-      // submit button
-    handleFormSubmit = event => {
-        event.preventDefault();
-        // print this.state.totalTrue, etc, here
-    };
 
     render() {
         // const { selectedOption } = this.state;
-
         return (
 
             <div className="questionsDiv">
@@ -236,24 +206,10 @@ class Questions extends Component {
                             />
 
                         </div>
-
+                        
                         )  
                     })}
                 </ol>
-
-                <button onClick={this.handleFormSubmit}>Submit</button>
-
-                <div className="masterResultsDiv">
-
-                    <div>
-                        Correct: {this.state.totalTrue}
-                    </div>
-
-                    <div>
-                        Wrong: {this.state.totalFalse}
-                    </div>
-
-                </div>
 
             </div>
 
