@@ -67,8 +67,6 @@ class App extends Component {
                 </div>
             </div>
 
-
-
             {/* this code will hide Results until these conditions are met. This was an experiment to see if anything hid Results from mounting on load */}
             {this.state.totalTrue >= 8 && this.state.totalFalse >= 8 &&
             <div className="resultsDiv">
