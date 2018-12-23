@@ -9,6 +9,7 @@ class App extends Component {
     state = {
         totalTrue: 0,
         totalFalse: 0,
+        selectedOption: null
     }
 
     componentDidMount() {
@@ -22,9 +23,9 @@ class App extends Component {
         console.log("submit button clicked");
     };
 
-    callbackHandlerFunction = (selectedOption) => {
+    callbackHandlerFunction = ({ selectedOption }) => { // note the curly braces.
         this.setState({ selectedOption });
-    }
+    }  
 
   render() {
     return (

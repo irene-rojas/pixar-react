@@ -198,10 +198,8 @@ class Questions extends Component {
                 console.log(`New TotalFalse: ${this.totalFalse}`);
             });
         };
-        this.props.handleClickInParent({selectedOption});
-
+        this.props.handleClickInParent(selectedOption);
       }
-
 
 
     render() {
