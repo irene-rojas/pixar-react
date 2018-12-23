@@ -12,8 +12,11 @@ class App extends Component {
     }
 
     componentDidMount() {
-        console.log(`TotalTrue: ${this.state.totalTrue}`);
-        console.log(`TotalFalse: ${this.state.totalFalse}`);
+        // console.log(`TotalTrue: ${this.state.totalTrue}`);
+        // console.log(`TotalFalse: ${this.state.totalFalse}`);
+        return (
+            <Timer />
+        )
     }
 
     // submit button
