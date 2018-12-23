@@ -73,7 +73,7 @@ class App extends Component {
                     totalFalse={this.state.totalFalse}
                 />
             </div>
-            
+
             </div>
 
         </div>
