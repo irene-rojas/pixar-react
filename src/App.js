@@ -25,13 +25,11 @@ class App extends Component {
     callbackHandlerFunction = ( selectedOption ) => {
         const answerValue = selectedOption.value;
         if (answerValue === true) {
-            // console.log(answerValue);
             this.setState({totalTrue: this.state.totalTrue + 1}, () => {
                 console.log(`New TotalTrue: ${this.state.totalTrue}`);
             });
         };
         if (answerValue === false) {
-            // console.log(answerValue);
             this.setState({totalFalse: this.state.totalFalse + 1}, () => {
                 console.log(`New TotalFalse: ${this.state.totalFalse}`);
             });
