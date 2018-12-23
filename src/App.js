@@ -7,13 +7,13 @@ import Results from "../src/Results";
 class App extends Component {
 
     state = {
-        totalTrue: 0,
-        totalFalse: 0,
+        // totalTrue: 0,
+        // totalFalse: 0,
     }
 
     componentDidMount() {
-        console.log(`TotalTrue: ${this.state.totalTrue}`);
-        console.log(`TotalFalse: ${this.state.totalFalse}`);
+        console.log(`TotalTrue: ${this.totalTrue}`);
+        console.log(`TotalFalse: ${this.totalFalse}`);
     }
 
     // submit button
@@ -57,7 +57,7 @@ class App extends Component {
             <div className="resultsDiv">
                 <Results 
                     totalTrue={this.state.totalTrue}
-                    totalFalse={this.state.totalFalse}
+                    totalFalse={this.totalFalse}
                 />
             </div>
 

@@ -179,8 +179,8 @@ class Questions extends Component {
     state = {
         answerChoices,
         selectedOption: null,
-        // totalTrue: 0,
-        // totalFalse: 0,
+        totalTrue: 0,
+        totalFalse: 0,
     }
 
     handleChange = (selectedOption) => {
@@ -190,14 +190,14 @@ class Questions extends Component {
         const answerValue = selectedOption.value;
         if (answerValue === true) {
             // console.log(answerValue);
-            this.setState({totalTrue: this.totalTrue + 1}, () => {
-                console.log(`New TotalTrue: ${this.totalTrue}`);
+            this.setState({totalTrue: this.state.totalTrue + 1}, () => {
+                console.log(`New TotalTrue: ${this.state.totalTrue}`);
             });
         };
         if (answerValue === false) {
             // console.log(answerValue);
-            this.setState({totalFalse: this.totalFalse + 1}, () => {
-                console.log(`New TotalFalse: ${this.totalFalse}`);
+            this.setState({totalFalse: this.state.totalFalse + 1}, () => {
+                console.log(`New TotalFalse: ${this.state.totalFalse}`);
             });
         };
         this.props.handleClickInParent({selectedOption});
