@@ -9,12 +9,12 @@ class Timer extends Component {
   startTimer = () => {
     this.timer = setInterval(() => this.setState({
       timer: this.state.timer - 1}), 1000); 
+    // onClick, load Questions
    };
 
   stopTimer = () => {
     clearInterval(this.timer);
     alert("Time's up!");
-    // onClick, load Questions
   };
 
   render() {

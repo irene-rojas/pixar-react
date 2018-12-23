@@ -12,8 +12,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        // console.log(`TotalTrue: ${this.state.totalTrue}`);
-        // console.log(`TotalFalse: ${this.state.totalFalse}`);
         return (
             <Timer />
         )
@@ -23,6 +21,9 @@ class App extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         console.log("submit button clicked");
+            return (
+                <Results />
+            )
     };
 
     callbackHandlerFunction = ( selectedOption ) => {
@@ -66,14 +67,13 @@ class App extends Component {
                 <button onClick={this.handleFormSubmit}>Submit</button>
             </div>
 
-            {/* this.state.articles.length > 0 && ...*/}
             <div className="resultsDiv">
                 <Results 
                     totalTrue={this.state.totalTrue}
                     totalFalse={this.state.totalFalse}
                 />
             </div>
-
+            
             </div>
 
         </div>
