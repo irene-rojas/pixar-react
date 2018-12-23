@@ -7,13 +7,13 @@ import Results from "../src/Results";
 class App extends Component {
 
     state = {
-        // totalTrue: 0,
-        // totalFalse: 0,
+        totalTrue: 0,
+        totalFalse: 0,
     }
 
     componentDidMount() {
-        console.log(`TotalTrue: ${this.totalTrue}`);
-        console.log(`TotalFalse: ${this.totalFalse}`);
+        console.log(`TotalTrue: ${this.state.totalTrue}`);
+        console.log(`TotalFalse: ${this.state.totalFalse}`);
     }
 
     // submit button
@@ -22,9 +22,21 @@ class App extends Component {
         console.log("submit button clicked");
     };
 
-    callbackHandlerFunction = ({ selectedOption }) => {
-        this.setState({ selectedOption });
-    }  
+    callbackHandlerFunction = ( selectedOption ) => {
+        const answerValue = selectedOption.value;
+        if (answerValue === true) {
+            // console.log(answerValue);
+            this.setState({totalTrue: this.state.totalTrue + 1}, () => {
+                console.log(`New TotalTrue: ${this.state.totalTrue}`);
+            });
+        };
+        if (answerValue === false) {
+            // console.log(answerValue);
+            this.setState({totalFalse: this.state.totalFalse + 1}, () => {
+                console.log(`New TotalFalse: ${this.state.totalFalse}`);
+            });
+        };
+      } 
 
   render() {
     return (
@@ -57,7 +69,7 @@ class App extends Component {
             <div className="resultsDiv">
                 <Results 
                     totalTrue={this.state.totalTrue}
-                    totalFalse={this.totalFalse}
+                    totalFalse={this.state.totalFalse}
                 />
             </div>
 
