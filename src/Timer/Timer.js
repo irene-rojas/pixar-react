@@ -6,18 +6,17 @@ class Timer extends Component {
     timer: 10
   };
 
-  startTimer = () => {
+  startTimer = (event) => {
     this.timer = setInterval(() => this.setState({
       timer: this.state.timer - 1}), 1000); 
     // onClick, load Questions
-        
+        this.props.handleTimerClick(event);
    };
 
   stopTimer = () => {
     clearInterval(this.timer);
     alert("Time's up!");
     // when this.state.timer === 0, load Results
-    // do I need to import Results?
   };
 
   render() {

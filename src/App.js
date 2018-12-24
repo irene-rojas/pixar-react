@@ -13,12 +13,16 @@ class App extends Component {
         showResults: false,
     }
 
-    timerCallback = () => {
-        
+    clickStart = (event) => {
+        event.preventDefault();
+        console.log("start button clicked");
+        this.setState(
+            {showQuestions: true}
+        )
     }
 
     // submit button
-    handleFormSubmit = event => {
+    handleFormSubmit = (event) => {
         event.preventDefault();
         console.log("submit button clicked");
         this.setState(
@@ -54,7 +58,8 @@ class App extends Component {
             </div>
 
             <div className="timerDiv">
-                <Timer />   
+                <Timer 
+                handleTimerClick={this.clickStart}/>   
             </div>
 
             {this.state.showQuestions &&
