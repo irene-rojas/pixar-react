@@ -30,16 +30,20 @@ class App extends Component {
             {showResults: true,
             showQuestions: false,
             showTimer: false}
+            // timer still appears in resultsDiv
         )
     };
 
     timerZero = () => {
+        if (this.state.timer === 0) {
         this.setState(
             {showResults: true,
             showQuestions: false,
             showTimer: false}
         )
-    }
+        }
+        // nothing happens >:(
+    };
 
     callbackHandlerFunction = ( selectedOption ) => {
         const answerValue = selectedOption.value;
@@ -56,7 +60,6 @@ class App extends Component {
       } 
 
   render() {
-    //   timerRender here?
     return (
 
       <div className="parallax">
@@ -72,6 +75,7 @@ class App extends Component {
             <div className="timerDiv">
                 <Timer 
                 handleTimerClick={this.clickStart}
+                timeOut={this.timerZero}
                 />   
             </div>
 
