@@ -9,6 +9,9 @@ class App extends Component {
     state = {
         totalTrue: 0,
         totalFalse: 0,
+        showTimer: true,
+        showQuestions: false,
+        showResults: false,
     }
 
     componentDidMount() {
@@ -41,6 +44,12 @@ class App extends Component {
       } 
 
   render() {
+    //   conditional rendering goes here
+
+    if (this.state.showQuestions) {
+        return null
+    }
+
     return (
 
       <div className="parallax">
@@ -67,15 +76,13 @@ class App extends Component {
                 </div>
             </div>
 
-            {/* this code will hide Results until these conditions are met. This was an experiment to see if anything hid Results from mounting on load */}
-            {this.state.totalTrue >= 8 && this.state.totalFalse >= 8 &&
             <div className="resultsDiv">
                 <Results 
                     totalTrue={this.state.totalTrue}
                     totalFalse={this.state.totalFalse}
                 />
             </div>
-            }      
+
             </div>
 
         </div>
