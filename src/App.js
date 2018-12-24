@@ -9,22 +9,37 @@ class App extends Component {
     state = {
         totalTrue: 0,
         totalFalse: 0,
+        showTimer: true,
+        showQuestions: false,
+        showResults: false,
     }
 
-    componentDidMount() {
-        return (
-            <Timer />
+    clickStart = (event) => {
+        event.preventDefault();
+        console.log("start button clicked");
+        this.setState(
+            {showQuestions: true}
         )
     }
 
     // submit button
-    handleFormSubmit = event => {
+    handleFormSubmit = (event) => {
         event.preventDefault();
         console.log("submit button clicked");
-            return (
-                <Results />
-            )
+        this.setState(
+            {showResults: true,
+            showQuestions: false,
+            showTimer: false}
+        )
     };
+
+    timerZero = () => {
+        this.setState(
+            {showResults: true,
+            showQuestions: false,
+            showTimer: false}
+        )
+    }
 
     callbackHandlerFunction = ( selectedOption ) => {
         const answerValue = selectedOption.value;
@@ -41,6 +56,7 @@ class App extends Component {
       } 
 
   render() {
+    //   timerRender here?
     return (
 
       <div className="parallax">
@@ -54,28 +70,32 @@ class App extends Component {
             </div>
 
             <div className="timerDiv">
-                <Timer />   
+                <Timer 
+                handleTimerClick={this.clickStart}
+                />   
             </div>
 
+            {this.state.showQuestions &&
             <div className="questionSection">
                 <Questions 
-                    handleClickInParent={this.callbackHandlerFunction} 
+                    handleClickInParent={this.callbackHandlerFunction}
                 />
 
                 <div>
                     <button onClick={this.handleFormSubmit}>Submit</button>
                 </div>
             </div>
+            }
 
-            {/* this code will hide Results until these conditions are met. This was an experiment to see if anything hid Results from mounting on load */}
-            {this.state.totalTrue >= 8 && this.state.totalFalse >= 8 &&
+            {this.state.showResults && 
             <div className="resultsDiv">
                 <Results 
                     totalTrue={this.state.totalTrue}
                     totalFalse={this.state.totalFalse}
                 />
             </div>
-            }      
+            }
+
             </div>
 
         </div>
