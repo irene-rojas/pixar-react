@@ -9,24 +9,21 @@ class App extends Component {
     state = {
         totalTrue: 0,
         totalFalse: 0,
-        showTimer: true,
         showQuestions: false,
         showResults: false,
     }
 
-    componentDidMount() {
-        return (
-            <Timer />
-        )
+    timerCallback = () => {
+        
     }
 
     // submit button
     handleFormSubmit = event => {
         event.preventDefault();
         console.log("submit button clicked");
-            return (
-                <Results />
-            )
+        this.setState(
+            {showResults: true}
+        )
     };
 
     callbackHandlerFunction = ( selectedOption ) => {
@@ -44,12 +41,6 @@ class App extends Component {
       } 
 
   render() {
-    //   conditional rendering goes here
-
-    if (this.state.showQuestions) {
-        return null
-    }
-
     return (
 
       <div className="parallax">
@@ -66,22 +57,26 @@ class App extends Component {
                 <Timer />   
             </div>
 
+            {this.state.showQuestions &&
             <div className="questionSection">
                 <Questions 
-                    handleClickInParent={this.callbackHandlerFunction} 
+                    handleClickInParent={this.callbackHandlerFunction}
                 />
 
                 <div>
                     <button onClick={this.handleFormSubmit}>Submit</button>
                 </div>
             </div>
+            }
 
+            {this.state.showResults && 
             <div className="resultsDiv">
                 <Results 
                     totalTrue={this.state.totalTrue}
                     totalFalse={this.state.totalFalse}
                 />
             </div>
+            }
 
             </div>
 

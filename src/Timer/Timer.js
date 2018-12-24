@@ -10,7 +10,7 @@ class Timer extends Component {
     this.timer = setInterval(() => this.setState({
       timer: this.state.timer - 1}), 1000); 
     // onClick, load Questions
-    // but do I need to import Questions?
+        
    };
 
   stopTimer = () => {
