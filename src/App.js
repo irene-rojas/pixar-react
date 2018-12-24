@@ -72,7 +72,6 @@ class App extends Component {
             <div className="timerDiv">
                 <Timer 
                 handleTimerClick={this.clickStart}
-                timeOut={() => this.timerZero}
                 />   
             </div>
 
