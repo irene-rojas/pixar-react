@@ -9,6 +9,7 @@ class App extends Component {
     state = {
         totalTrue: 0,
         totalFalse: 0,
+        showTimer: true,
         showQuestions: false,
         showResults: false,
     }
@@ -26,9 +27,19 @@ class App extends Component {
         event.preventDefault();
         console.log("submit button clicked");
         this.setState(
-            {showResults: true}
+            {showResults: true,
+            showQuestions: false,
+            showTimer: false}
         )
     };
+
+    timerZero = () => {
+        this.setState(
+            {showResults: true,
+            showQuestions: false,
+            showTimer: false}
+        )
+    }
 
     callbackHandlerFunction = ( selectedOption ) => {
         const answerValue = selectedOption.value;
@@ -45,6 +56,7 @@ class App extends Component {
       } 
 
   render() {
+    //   timerRender here?
     return (
 
       <div className="parallax">
@@ -59,7 +71,9 @@ class App extends Component {
 
             <div className="timerDiv">
                 <Timer 
-                handleTimerClick={this.clickStart}/>   
+                handleTimerClick={this.clickStart}
+                timeOut={() => this.timerZero}
+                />   
             </div>
 
             {this.state.showQuestions &&

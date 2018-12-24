@@ -15,8 +15,8 @@ class Timer extends Component {
 
   stopTimer = () => {
     clearInterval(this.timer);
-    alert("Time's up!");
-    // when this.state.timer === 0, load Results
+    console.log("Time's up!");
+    // this.props.timeOut();
   };
 
   render() {
