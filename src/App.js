@@ -30,6 +30,7 @@ class App extends Component {
             {showResults: true,
             showQuestions: false,
             showTimer: false}
+            // timer still appears in resultsDiv
         )
     };
 
@@ -41,6 +42,7 @@ class App extends Component {
             showTimer: false}
         )
         }
+        // nothing happens >:(
     };
 
     callbackHandlerFunction = ( selectedOption ) => {
