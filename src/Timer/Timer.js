@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Timer extends Component {
 
   state = {
-    timer: 10
+    timer: 60
   };
 
   startTimer = (event) => {
@@ -15,8 +15,21 @@ class Timer extends Component {
 
   stopTimer = () => {
     clearInterval(this.timer);
-    console.log("Time's up!");
+    // console.log("Time's up!");
     this.props.timeOut();
+  };
+
+  shouldComponentUpdate() {
+    // console.log(this.state.timer);
+    if (this.state.timer <= 0) {
+      this.stopTimer();
+      return false;
+    }
+    return true;
+  };
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   };
 
   render() {
@@ -24,7 +37,6 @@ class Timer extends Component {
       <div className="Timer">
         <div>{this.state.timer} seconds</div>
         <button onClick={this.startTimer}>Start!</button>
-        {this.state.timer === 0 && this.stopTimer()}
       </div>
     );
   }
