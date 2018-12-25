@@ -2,7 +2,7 @@
   "name": "pixar-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://irene-rojas.github.io/pixar-react",
+  "homepage": "https://irene-rojas.github.io/pixar-react",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.6.0",
@@ -12,7 +12,7 @@
     "react-select": "^2.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
