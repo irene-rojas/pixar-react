@@ -1,7 +1,7 @@
 {
   "name": "pixar-react",
   "version": "0.1.0",
-  "homepage": "http://irene-rojas.github.io/pixar-react",
+  "homepage": "https://irene-rojas.github.io/pixar-react",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
