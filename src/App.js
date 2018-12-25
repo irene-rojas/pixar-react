@@ -16,7 +16,7 @@ class App extends Component {
 
     clickStart = (event) => {
         event.preventDefault();
-        console.log("start button clicked");
+        // console.log("start button clicked");
         this.setState(
             {showQuestions: true}
         )
@@ -25,7 +25,7 @@ class App extends Component {
     // submit button
     handleFormSubmit = (event) => {
         event.preventDefault();
-        console.log("submit button clicked");
+        // console.log("submit button clicked");
         this.setState(
             {showResults: true,
             showQuestions: false,
@@ -44,12 +44,12 @@ class App extends Component {
         const answerValue = selectedOption.value;
         if (answerValue === true) {
             this.setState({totalTrue: this.state.totalTrue + 1}, () => {
-                console.log(`New TotalTrue: ${this.state.totalTrue}`);
+                console.log("Pixar");
             });
         };
         if (answerValue === false) {
             this.setState({totalFalse: this.state.totalFalse + 1}, () => {
-                console.log(`New TotalFalse: ${this.state.totalFalse}`);
+                console.log("Pixar");
             });
         };
       } 
