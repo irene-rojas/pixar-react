@@ -34,16 +34,11 @@ class App extends Component {
         )
     };
 
-    timerZero = () => {
-        if (this.state.timer === 0) {
-        this.setState(
-            {showResults: true,
-            showQuestions: false,
-            showTimer: false}
-        )
-        }
-        // nothing happens >:(
-    };
+    timerZero = () => this.setState(
+        {showResults: true,
+        showQuestions: false,
+        showTimer: false}
+    )
 
     callbackHandlerFunction = ( selectedOption ) => {
         const answerValue = selectedOption.value;
@@ -72,12 +67,14 @@ class App extends Component {
                 <h1>Pixar Trivia!</h1>
             </div>
 
+            {this.state.showTimer && 
             <div className="timerDiv">
                 <Timer 
                 handleTimerClick={this.clickStart}
                 timeOut={this.timerZero}
                 />   
             </div>
+            }
 
             {this.state.showQuestions &&
             <div className="questionSection">
