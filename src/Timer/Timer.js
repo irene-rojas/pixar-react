@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Timer extends Component {
 
   state = {
-    timer: 60
+    timer: 120
   };
 
   startTimer = (event) => {
