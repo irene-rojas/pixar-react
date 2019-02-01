@@ -10,10 +10,10 @@ h1 {
     margin-bottom: 10px;
 }
 
-button {
+/* button {
     border: 0.5px solid black;
     border-radius: 5px;
-}
+} */
 
 
 
@@ -42,10 +42,18 @@ button {
     padding-bottom: 25px;
     background-color: white;
 }
+/* end mobile */
 
+@media (max-width: 1100px) {
+    button {
+        border: 0.5px solid black;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+}
 
 /* desktop */
-@media (min-width: 700px) {
+@media (min-width: 1100px) {
 
 .App {
     margin: 0 auto;
@@ -53,7 +61,6 @@ button {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 50px 1fr auto;
     font-family: "Avenir Next";
-    /* background-color: white; */
 }
 
 .wrapper {
