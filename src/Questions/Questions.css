@@ -3,9 +3,17 @@
 }
 
 ol {
+    margin: 25px;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 700px) {
+ol {
     margin: 50px;
     padding: 0;
     margin-bottom: 25px;
+}
 }
 
 .masterResultsDiv {

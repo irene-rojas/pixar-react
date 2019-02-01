@@ -10,6 +10,10 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* button {
+    border: 0.5px solid black;
+    border-radius: 5px;
+} */
 
 
 
@@ -17,15 +21,16 @@ h1 {
 .App {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 50px 1fr auto;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: repeat(3, auto) 5px;
+    grid-row-gap: 40px;
     font-family: "Avenir Next";
-    /* background-color: white; */
+    text-align: center;
 }
 
 .wrapper {
     /* location inside App */
-    grid-column: 2/span 6;
+    grid-column: 2/3;
     grid-row: 2/3;
     /* its own grid layout */
     display: grid;
@@ -37,10 +42,26 @@ h1 {
     padding-bottom: 25px;
     background-color: white;
 }
+/* end mobile */
 
+@media (max-width: 1100px) {
+    button {
+        border: 0.5px solid black;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+}
 
 /* desktop */
-@media (min-width: 700px) {
+@media (min-width: 1100px) {
+
+.App {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 50px 1fr auto;
+    font-family: "Avenir Next";
+}
 
 .wrapper {
     /* location inside App */
